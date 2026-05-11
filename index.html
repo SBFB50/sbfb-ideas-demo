@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SBFB Ideas Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top-bar">
+    <h1 class="logo">SBFB Ideas Hub</h1>
+    <div class="identity" id="identity">
+      <span class="identity-dot" id="identity-dot"></span>
+      <span class="identity-key mono" id="identity-key">Connexion…</span>
+    </div>
+  </header>
+
+  <main class="content">
+
+    <section class="propose-section">
+      <h2>Proposer une idée</h2>
+      <div id="idea-form" class="idea-form">
+        <input
+          type="text"
+          id="idea-title"
+          class="input"
+          placeholder="Titre de l'idée"
+          maxlength="120"
+          autocomplete="off"
+        >
+        <textarea
+          id="idea-desc"
+          class="input textarea"
+          placeholder="Description (optionnel)"
+          rows="3"
+          maxlength="2000"
+        ></textarea>
+        <button type="button" class="btn btn-primary" id="submit-btn">Publier</button>
+      </div>
+    </section>
+
+    <section class="ideas-section">
+      <div class="ideas-header">
+        <h2>Idées <span class="count" id="ideas-count"></span></h2>
+        <div class="sort-controls">
+          <button class="sort-btn active" data-sort="votes" id="sort-votes">Votes</button>
+          <button class="sort-btn" data-sort="recent" id="sort-recent">Récentes</button>
+        </div>
+      </div>
+      <div id="ideas-list" class="ideas-list">
+        <p class="placeholder">Chargement…</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span id="sync-status" style="opacity:0.6;font-size:0.8em"></span>
+    <p>
+      SBFB Ideas Hub — une app
+      <a href="https://github.com/SBFB50/SBFB/tree/master/examples/sbfb-ideas/" target="_blank" rel="noopener">open source</a>
+      déployée sur le réseau SBFB.
+    </p>
+  </footer>
+
+  <script src="sbfb-bridge.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
